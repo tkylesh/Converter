@@ -1,12 +1,15 @@
-function() {
-  
-  var app = angular.module('nameApp', []);
-}();
 
 
-var hold = document.getELementById('holder');
-var degrees = document.getELementById('deg').value;
 
+var hold = document.getElementById("holder").innerHtml;
+
+
+//add degrees to h3 element on index.html
+function setTemp(){
+	var degrees = document.getElementById("deg").value;
+	hold = "temperature: "+ degrees;
+
+}
 
 
 
