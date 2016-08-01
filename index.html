@@ -1,9 +1,19 @@
-<<html>
+<html>
 <head>
 	<title>Converter</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
-<body>
+<body ng-app="Converter">
+	<form>
 	<h1>Converter</h1>
+</br>
+		<input type="number" id="deg" ng-model="degrees"/><button type="submit" id="convert">Convert</button></br></br>
+	
+		<input type="radio" name="temp">Fahrenheit</br>
+		<input type="radio" name="temp">Celsius</br>
+	
+	<h3 id="holder">{{degrees}}</h3>
+	</form>
 
 </body>
 </html>
