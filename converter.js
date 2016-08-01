@@ -1,22 +1,19 @@
 
 
 
-var hold = document.getElementById("holder").innerHtml;
 
 
-//add degrees to h3 element on index.html
-function setTemp(){
+	var hold = document.getElementById("holder").innerHtml;
 	var degrees = document.getElementById("deg").value;
-	hold = "temperature: "+ degrees;
-
-}
-
-
+	
 
 function toCelsius () {
+	//(F - 32)/1.8
+
+
 
 }
 
 function toFahrenheit () {
-
+	//(C*1.8)+32
 }
