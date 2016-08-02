@@ -7,10 +7,10 @@
 	<form>
 	<h1>Converter</h1>
 </br>
-		<input type="number" id="deg"/><button type="button" id="set" onclick="displayTemp()">Set</button><button type="button" id="convert">Convert</button></br></br>
+		<input type="number" id="deg"/><button type="button" id="set" onclick="displayTemp()">Set</button><button type="button" id="convert">Convert</button><button type="button" onclick="clearAll()">Clear</button></br></br>
 	
-		<input type="radio" name="temp" checked="checked" value="F">Fahrenheit</br>
-		<input type="radio" name="temp" value="C">Celsius</br>
+		<input type="radio" name="temp" id="temp1" checked="false" value="F">Fahrenheit</br>
+		<input type="radio" name="temp" id="temp2" checked="false" value="C">Celsius</br>
 	
 	<div id="holder"></div>
 	</form>
