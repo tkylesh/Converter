@@ -1,4 +1,10 @@
-
+/*
+TODO -
+Add an event handler to the input field that checks if the user pressed the enter key, and if that happens, perform the conversion.
+If the temperature is greater than 90F/32C the color of the converted temperature should be red.
+If the temperature is less than 32F/0C the color of the converted temperature should be blue.
+For any other temperature, the color should be green.
+*/
 
 
 
@@ -40,13 +46,33 @@ function clearAll(){
 function toCelsius () {
 	//(F - 32)/1.8
 	var val = document.getElementById("deg").value;
+	var cels =((val - 32)/1.8+" C");
+	if (cels <= 0 ){
+		document.getElementById("holder").style.color="blue";
+
+	}else if(cels >= 32){
+		document.getElementById("holder").style.color="red";
+	}else{
+		document.getElementById("holder").style.color="green";
+	}
 	//ocument.getElementById("holder").innerHTML =(val - 32)/1.8+" C";
-	console.log((val - 32)/1.8+" C");
+	document.getElementById("holder").innerHTML = celsius;
 }
 
 function toFahrenheit () {
 	//(C*1.8)+32
 	var val = document.getElementById("deg").value;
+	var fahr = ((val *1.8)+32+" F");
 	//document.getElementById("holder").innerHTML =(val *1.8)+32+" F";
-	console.log((val *1.8)+32+" F");
+	if (fahr < 32 ){
+		document.getElementById("holder").style.color="blue";
+
+	}else if(fahr > 90){
+		document.getElementById("holder").style.color="red";
+	}else{
+		document.getElementById("holder").style.color="green";
+	}
+	//ocument.getElementById("holder").innerHTML =(val - 32)/1.8+" C";
+	document.getElementById("holder").innerHTML = fahr;
+	
 }
